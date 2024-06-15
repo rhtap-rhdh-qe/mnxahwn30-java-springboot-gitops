@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: mnxahwn30-java-springboot-gitops
+  description: This is GitOps manifest for mnxahwn30-java-springboot   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: mnxahwn30-java-springboot
+    janus-idp.io/tekton: mnxahwn30-java-springboot 
+    backstage.io/kubernetes-id: mnxahwn30-java-springboot 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:mnxahwn30-java-springboot
